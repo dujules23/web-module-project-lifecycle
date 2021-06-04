@@ -3,6 +3,8 @@ import './App.css';
 import React from 'react';
 import axios from 'axios';
 
+import UserCard from './components/UserCard'
+
 class App extends React.Component {
   constructor() {
     super();
@@ -17,8 +19,14 @@ class App extends React.Component {
     axios.get(`https://api.github.com/users/dujules23`)
       .then(res => {
         console.log(res.data)
+        this.setState({
+          ...this.state,
+          user: res.data
+        });
+        console.log(this.state)
       })
       .catch(err => console.log(err))
+      
   }
 
 
@@ -31,6 +39,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <h1>Git Hub User</h1>
+        <UserCard user={this.state.user} />
       </div>
     );
   };

@@ -23,7 +23,7 @@ class App extends React.Component {
           ...this.state,
           user: res.data
         });
-        console.log(this.state)
+      
       })
       .catch(err => console.log(err))
       

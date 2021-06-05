@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Followers from './Followers'
+
 class UserCard extends React.Component {
   
   render () {
@@ -11,6 +13,7 @@ class UserCard extends React.Component {
         <div className="user-info">{this.props.user.name}</div>
         <div className="user-info">{this.props.user.login}</div>
         <div className="user-info">{this.props.user.location}</div>
+        <Followers />
       </div>
     );
   };

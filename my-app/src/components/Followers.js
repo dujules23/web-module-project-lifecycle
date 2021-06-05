@@ -1,4 +1,5 @@
 import React from 'react';
+import './Followers.css'
 
 import axios from 'axios';
 
